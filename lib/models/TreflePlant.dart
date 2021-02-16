@@ -2,18 +2,18 @@ class TreflePlant {
   int id;
   String common_name;
   String
-  slug; // An unique human-readable identifier (if you can, prefer to use this over id)
+      slug; // An unique human-readable identifier (if you can, prefer to use this over id)
   String
-  scientific_name; // The scientific name follows the Binomial nomenclature, and represents its genus and its species within the genus, resulting in a single worldwide name for each organism. The scientific name of an infraspecific taxons (ranks below species, such as subspecies, forms, varieties...) is a combination of the name of a species and an infraspecific epithet. A connecting term is used to denote the rank. See IAPT recommendation
+      scientific_name; // The scientific name follows the Binomial nomenclature, and represents its genus and its species within the genus, resulting in a single worldwide name for each organism. The scientific name of an infraspecific taxons (ranks below species, such as subspecies, forms, varieties...) is a combination of the name of a species and an infraspecific epithet. A connecting term is used to denote the rank. See IAPT recommendation
   int year; // The first publication year of a valid name of this species. See author citation
   String
-  bibliography; //	The first publication of a valid name of this species. See author citation
+      bibliography; //	The first publication of a valid name of this species. See author citation
   String
-  author; // The author(s) of the first publication of a valid name of this species. See author citation
+      author; // The author(s) of the first publication of a valid name of this species. See author citation
   String status; // The acceptance status of this species by IPNI
   String rank; // The taxonomic rank of the species
   String
-  family_common_name; // The common name (in english) of the species family
+      family_common_name; // The common name (in english) of the species family
   String family; // The scientific name of the species family
   int genus_id; // The id of the species genus
   String genus; // The scientific name of the species genus
@@ -53,6 +53,7 @@ class TreflePlant {
     this.sources,
   });
 
+  // Parse Json object to TreflePlant instance
   static TreflePlant fromJson(Map<String, dynamic> json) {
     return TreflePlant(
       id: json["id"],
